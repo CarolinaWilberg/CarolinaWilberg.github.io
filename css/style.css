@@ -18,91 +18,86 @@ BARRA DE NAVEGACION
 ********************/
 header{
     position: fixed;
-    top: 0px;
+    top: 0em;
     width: 100%;
     background-color: white;
-    /*margin: -150px 0px 0px 0px; Puse este margin porque al fijar el header se va para abajo*/
 }
 #menu{
     display: flex;
     justify-content: flex-end;
-    padding: 2.19em 8em;
+    padding: 1.6em 7em;
     box-shadow: 0em 0.31em 0.94em -0.31em lightgray;
 }
 #menu li{
     text-transform: uppercase;
     display: inline;
-    padding: 1.25em;
-    font-size: 1em;  
+    padding: 1.2em;
+    /*font-size: 1em; */
 }
-#menu .Boton{
+.Boton{
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
     background-color: #00BFA6;
     border-radius: 1.56em;
     padding: 0.63em 1.88em;
-    margin: 0.31em;
 }
-#menu .Boton>a{
+a .Boton{
     color: white;
 }
 #menu li>a:hover{
     color: #00BFA6;
 }
-#menu .Boton:hover{
+.Boton:hover{
     background-color: #10d4ba;
     border-radius: 1.56em;
     padding: 0.63em 1.88em;
-    margin: 0.31em;
+    cursor: pointer;
+    transition: 0.3s;
 }
-#menu .Boton>a:hover{
-    color: white;
-    
+.Boton:focus{
+    box-shadow: 0em 0em 0.5em 0em #00BFA6;
+    background-color: #02aa94;
 }
 
 /*****************************
-PRIMER SECTION, Presentacion
+PRIMER SECTION, Presentación
 ******************************/
 #Hola{
+    margin: 12em 8em 10em 8em;
+}
+.centro .main, .centro img{
+    padding: 0em auto;
+    width: 50%;
+    flex-grow: 1;
+}
+.centro{ 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 9.38em;
-    padding: 50px 0px 0px 0px; /*puse este padding porque si no se baja el header*/
-}
-#Hola .texto{
-    padding: 0em auto;
-    width: 50%;
-}
-#Hola .imagen{
-    padding: 0em auto;
-    width: 50%;
-}
-#Hola h2{
+} 
+.main h2{
     font-size: 1.88em;
 }
-#Hola h1{
+.main h1{
     font-family: 'Allison', cursive;
     font-size: 5.63em;
     color: #00BFA6;
 }
-#Hola p{
+.main p{
     font-size: 0.94em;
     margin: 0.63em 0em;
 }
-#Hola .Boton{
-    background-color: #00BFA6;
-    width: 7.5em;
-    text-transform: uppercase;
-    border-radius: 1.56em;
-    padding: 0.63em 1.88em;
+.main .Boton{
+    font-weight: bold;
+    width: 11.5em;
+    padding: 0.9em 1.88em;
     margin: 2.5em 0em;
 }
-#Hola .Boton>a{
-    color: white;
-}
-#Hola .Boton:hover{
-    background-color: #10d4ba;
-    border-radius: 1.56em;
-    padding: 0.63em 1.88em;
-    margin: 2.5em 0em; 
+.main .Boton:hover{
+    padding: 0.9em 1.88em;
+    margin: 2.5em 0em;
 } 
 
 /*****************************
@@ -111,53 +106,42 @@ SEGUNDO SECTION, Conocimientos
 #Conocimientos{
     background-color: #eaecee;
     padding: 7.5em;
+    text-align: center;
 }
 #Conocimientos h2{
     width: 100%;
     font-size: 2.5em;
-    text-align: center;
     margin-bottom: 1em;
 }
 #Conocimientos p{
-    /*width: 100%;*/
     font-size: 0.94em;
-    text-align: center;
     margin-bottom: 3.13em;
 }
-#Conocimientos .centro{ 
-    /*width: 90%;*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /*align-items: center;*/
-    /*background-color: #eaecee;*/
-    /*margin: 0em auto;*/
-} 
-.centro>div{
+#Conocimientos .centro>div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end; /*no se por qué necesito el flex-end para centrar el contenido*/
     background-color: white;
     width: 16.25em;
-    height: 14em;
+    height: 15em;
     margin: 0.63em;
-    padding-top: 0.7em;
+    /*padding-top: 1em;*/
     border: 0.063em solid lightgray;
     border-radius: 0.5em;
 }
 #Conocimientos div>p{
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: bold;
-    margin-top: 0.9em;
+    margin-top: -1.5em; /*Tuve que poner este margin, no se qué cambié para que me quede tan separado*/
 }
-.centro div>img{
+#Conocimientos .centro>div>img{
     width: 28%;
-    /*margin-top: 1em;*/
 }
-.centro>div:hover{
+#Conocimientos .centro>div:hover{
     box-shadow: 0em 0em 0.31em 0em #00BFA6;
     color: #00BFA6;
+    transition: 0.2s;
 }
 
 /***********************
@@ -169,73 +153,69 @@ TERCER SECTION, Frase
     color: black;
     text-align: center;
     /*height: 500px;*/
-    padding: 120px;
+    padding: 7.5em;
 }
 .Frase>img{
     width: 8%;
-    margin: 0px auto 60px auto;
+    margin: 0em auto 3.75em auto;
 }
 .Frase>p{
-    font-size: 25px;
+    font-size: 1.56em;
 }
 .Frase>h3{
     font-family: 'Allison', cursive;
-    font-size: 55px;
-    margin-top: 50px;
+    font-size: 3.44em;
+    margin-top: 1em;
 }
 
 /**************************
 CUARTO SECTION, Proyectos
 ***************************/
 #Proyectos{
-    padding: 7.5em;
+    padding: 8em;
+    text-align: center;
 }
 #Proyectos h2{
-    width: 100%;
     font-size: 2.5em;
-    text-align: center;
     margin-bottom: 1em;
 }
 #Proyectos p{
-    width: 100%;
     font-size: 0.94em;
-    text-align: center;
     margin-bottom: 3.13em;
 }
-#Proyectos .pro{
+#Proyectos .centro2{
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
-#Proyectos #left{
-    margin-left: 50px;
-}
-.pro>div,#left{
+#Proyectos .centro2>a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end; /*Lo mismo que me pasa en el section de Conocimientos*/
     background-color: white;
     width: 20em;
     height: 19em;
     margin: 0.65em;
-    /*padding-top: 0.7em;*/
     border: 0.063em solid lightgray;
     border-radius: 0.5em;
 }
-#Proyectos div>p{
+#Proyectos a>p{
     font-size: 1em;
     font-weight: bold;
     margin-top: 1.5em;
 }
-.pro div>img, #left>img{
-    width: 70%;
-    margin-top: 1em;
+#Proyectos .centro2 img{
+    width: 90%;
+    max-height: 9em;
+    /*margin-top: 1em;*/
 }
-.pro>div:hover, #left:hover{
+#Proyectos .centro2>a:hover{
     box-shadow: 0em 0em 0.31em 0em #00BFA6;
     color: #00BFA6;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 /************************
@@ -243,103 +223,118 @@ QUINTO SECTION, Contacto
 *************************/
 #Contacto{
     background-color: #eaecee;
-    padding: 200px 100px;
+    padding: 10em 0em;
 }
 .sc{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: white;
-    margin: 0px auto -50px auto;
-    width: 90%;
+    margin: 0em auto;
+    width: 70%;
     border: 0.063em solid lightgray;
     border-radius: 0.94em;
-    padding-left: 60px;
+    padding: 5em 3.75em 4em 3.75em;
 }
 .sc h2{
     width: 100%;
     font-size: 2.5em;
-    /*margin-bottom: 1em;*/
-    margin: 60px 40px 20px 0px;
+    margin-bottom: 0.8em;
 }
 .sc>div{
-    flex-grow: 1;
+    /*flex-grow: 1;*/
     width: 50%;
 }
-/*Primera columna*/
+
+/*****Primera columna*****/
 .first-col>p{
     width: 70%;
     font-size: 0.94em;
-    margin: 0px 40px 40px 0px;
+    margin-bottom: 2.5em;
 }
 .first-col ul>li{
-    width: 70%;
     font-size: 0.94em;
-    margin: 10px 40px 10px 10px;
+    margin-bottom: 0.65em;
 }
 .first-col i{
-    padding: 10px;
+    margin-right: 0.6em;
+    padding: 0.5em;
     font-size: 1.2em;
     color: #00BFA6;
 }
 .first-col i:hover{
+    margin-right: 0.6em;
+    padding: 0.5em;
     font-size: 1.2em;
     color: white;
     background-color: #10d4ba;
-    padding: 10px;
-    border-radius: 20px;
+    border-radius: 10em;
+    transition: 0.3s;
 }
 .first-col a:hover{
     color: #10d4ba;
 }
-/*Segunda columna*/
+.first-col a:focus{
+    background-color: white;
+    padding: 0.6em 0.6em 0.6em 0em;
+    border-radius: 1.25em;
+    box-shadow: 0em 0em 0.5em 0em #00BFA6;
+}
+
+/*****Segunda columna*****/
 .last-col label{
     font-weight: bold;
-    margin-right: 60px;
+    /*margin-right: 30px;*/
 }
-.username label{
-    margin-right: 30%;
+/*form{
+    display: block;
+}*/
+.username{
+    display: flex;
+    justify-content: left;
 }
-.last-col input,textarea{
+.username .name, .username .last-name{
+    display: block;
+    flex-grow: 1;
+}
+input,textarea{
     border: none;
-    border-radius: 20px;
+    border-radius: 1.25em;
     background-color: #f1f4f7;
-    padding: 10px 0px 10px 15px;
+    padding: 0.5em 0em 0.75em 0.95em;
     font-family: 'Montserrat', sans-serif;
-    color: #5c5959;
-    margin: 10px 0px;
+    color: #7c7575;
+    margin: 0.65em 0em 1.25em 0em;
     font-size: 0.9em;
     max-width: 440px;
     max-height: 200px;
 }
 textarea{
-    width: 85%;
-    height: 150px;
+    width: 100%;
+    height: 9.38em;
 }
 .last-col .Boton{
     background-color: #00BFA6;
     width: 10em;
-    text-transform: uppercase;
     border-radius: 1.8em;
-    padding: 1.1em;
-    /*margin: 2.5em;*/
+    padding: 1em;
     color: white;
     font-size: 0.9em;
-    margin-bottom: 70px;
 }
 .last-col .Boton:hover{
     background-color: #10d4ba;
     width: 10em;
     text-transform: uppercase;
     border-radius: 1.8em;
-    padding: 1.1em;
-    /*margin: 2.5em;*/
+    padding: 1em;
     color: white;
     font-size: 0.9em;
     cursor: pointer;
+    transition: 0.3s;
 }
 input:focus,textarea:focus{
     box-shadow: 0em 0em 0.5em 0em #00BFA6;
     outline: 0 none;
+    transition: 0.2s;
 }
 
 /**************
@@ -350,30 +345,30 @@ footer{
     background-size: cover;
     color: black;
     text-align: center;
-    padding: 70px;
+    padding: 4.4em;
 }
 footer a{
-    margin: 10px;
+    margin: 0em 0.65em;
     text-transform: uppercase;
     font-size: 0.9em;
 }
 footer i{
-    font-size: 1.2em;
+    font-size: 1.3em;
     background-color: white;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 20px;
+    padding: 0.7em;
+    border: 0.06em solid white;
+    border-radius: 10em;
     color: black;
-    margin: 30px 5px;
+    margin: 1.9em 0.1em 1.5em 0.1em;
 }
 footer i:hover{
-    font-size: 1.2em;
+    font-size: 1.3em;
     background-color: black;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid white;
+    padding: 0.7em;
+    border-radius: 10em;
+    border: 0.06em solid white;
     color: white;
-    margin: 30px 5px;
+    margin: 1.9em 0.1em 1.5em 0.1em;
 }
 footer span{
     font-family: 'Allison', cursive;
