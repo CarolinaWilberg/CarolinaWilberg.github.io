@@ -4,7 +4,7 @@
     list-style: none;
 }
 body{
-    margin: 0em auto;
+    /*margin: 0em auto;*/
     font-family: 'Montserrat', sans-serif;
     color: #343a40;
 }
@@ -25,14 +25,19 @@ header{
 #menu{
     display: flex;
     justify-content: flex-end;
-    padding: 1.6em 7em;
+    padding: 1.5% 6%;
     box-shadow: 0em 0.31em 0.94em -0.31em lightgray;
 }
 #menu li{
     text-transform: uppercase;
     display: inline;
-    padding: 1.2em;
+    margin: 0.8em;
     /*font-size: 1em; */
+}
+#menu li>a{
+    background-color: white;
+    padding: 0.6em;
+    border-radius: 1.25em;
 }
 .Boton{
     border: none;
@@ -48,6 +53,12 @@ a .Boton{
 }
 #menu li>a:hover{
     color: #00BFA6;
+}
+#menu li>a:focus{
+    background-color: white;
+    padding: 0.6em;
+    border-radius: 1.25em;
+    box-shadow: 0em 0em 0.5em 0em #00BFA6;
 }
 .Boton:hover{
     background-color: #10d4ba;
@@ -65,19 +76,22 @@ a .Boton{
 PRIMER SECTION, Presentación
 ******************************/
 #Hola{
-    margin: 12em 8em 10em 8em;
-}
-.centro .main, .centro img{
-    padding: 0em auto;
-    width: 50%;
-    flex-grow: 1;
-}
-.centro{ 
+    margin: 13em 0em 11em 0em;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+}
+.about-me{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     max-width: 1100px;
-} 
+}
+.about-me .main, .about-me img{
+    width: 100%;
+    max-width: 500px;
+    /*flex-grow: 1;*/
+}
 .main h2{
     font-size: 1.88em;
 }
@@ -118,12 +132,19 @@ SEGUNDO SECTION, Conocimientos
     font-size: 0.94em;
     margin-bottom: 3.13em;
 }
+.centro{
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 #Conocimientos .centro>div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end; /*no se por qué necesito el flex-end para centrar el contenido*/
     background-color: white;
+    min-width: 20px;
     width: 16.25em;
     height: 15em;
     margin: 0.63em;
@@ -134,7 +155,7 @@ SEGUNDO SECTION, Conocimientos
 #Conocimientos div>p{
     font-size: 1.2em;
     font-weight: bold;
-    margin-top: -1.5em; /*Tuve que poner este margin, no se qué cambié para que me quede tan separado*/
+    margin-top: 1em; 
 }
 #Conocimientos .centro>div>img{
     width: 28%;
@@ -159,6 +180,7 @@ TERCER SECTION, Frase
 .Frase>img{
     width: 8%;
     margin: 0em auto 3.75em auto;
+    min-width: 60px;
 }
 .Frase>p{
     font-size: 1.56em;
@@ -226,7 +248,7 @@ QUINTO SECTION, Contacto
     background-color: #eaecee;
     padding: 10em 0em;
 }
-.sc{
+.form{
     display: flex;
     justify-content: center;
     background-color: white;
@@ -236,12 +258,12 @@ QUINTO SECTION, Contacto
     border-radius: 0.94em;
     padding: 5em 3.75em 4em 3.75em;
 }
-.sc h2{
+.form h2{
     width: 100%;
     font-size: 2.5em;
     margin-bottom: 0.8em;
 }
-.sc>div{
+.form>div{
     /*flex-grow: 1;*/
     width: 50%;
 }
@@ -348,30 +370,63 @@ footer{
     text-align: center;
     padding: 4.4em;
 }
-footer a{
+footer .nav>a{
     margin: 0em 0.65em;
     text-transform: uppercase;
     font-size: 0.9em;
+    padding: 0.6em;
+    border-radius: 1.25em;
+}
+footer .nav>a:focus{
+    border-radius: 1.25em;
+    box-shadow: 0em 0em 0.5em 0em black;
 }
 footer i{
-    font-size: 1.3em;
+    font-size: 1.2em;
     background-color: white;
     padding: 0.7em;
     border: 0.06em solid white;
     border-radius: 10em;
     color: black;
-    margin: 1.9em 0.1em 1.5em 0.1em;
+    margin: 2em 0.5em 1.4em 0.5em;
 }
 footer i:hover{
+    font-size: 1.2em;
+    background-color: black;
+    padding: 0.7em;
+    border-radius: 10em;
+    border: 0.06em solid white;
+    color: white;
+    margin: 2em 0.5em 1.4em 0.5em;
+}
+/*footer .social>a:focus{
     font-size: 1.3em;
     background-color: black;
     padding: 0.7em;
     border-radius: 10em;
     border: 0.06em solid white;
     color: white;
-    margin: 1.9em 0.1em 1.5em 0.1em;
-}
+    margin: 2em 0.4em 1.4em 0.4em;
+    box-shadow: 0em 0em 0.5em 0em black;
+}*/
 footer span{
     font-family: 'Allison', cursive;
     font-size: 2em;
+}
+
+/**********************
+MEDIA QUERIES
+**********************/
+@media (max-width:1100px){
+    #menu{
+        display: none;
+    }
+    .about-me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-me .main{
+        text-align: center;
+        margin-bottom: 60px;
+    }
 }
