@@ -2,6 +2,7 @@
     margin: 0em;
     padding: 0em;
     list-style: none;
+    box-sizing: border-box;
 }
 body{
     /*margin: 0em auto;*/
@@ -39,7 +40,7 @@ header{
     padding: 0.6em;
     border-radius: 1.25em;
 }
-.Boton{
+.boton{
     border: none;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -48,7 +49,7 @@ header{
     border-radius: 1.56em;
     padding: 0.63em 1.88em;
 }
-a .Boton{
+a .boton{
     color: white;
 }
 #menu li>a:hover{
@@ -60,14 +61,14 @@ a .Boton{
     border-radius: 1.25em;
     box-shadow: 0em 0em 0.5em 0em #00BFA6;
 }
-.Boton:hover{
+.boton:hover{
     background-color: #10d4ba;
     border-radius: 1.56em;
     padding: 0.63em 1.88em;
     cursor: pointer;
     transition: 0.3s;
 }
-.Boton:focus{
+.boton:focus{
     box-shadow: 0em 0em 0.5em 0em #00BFA6;
     background-color: #02aa94;
 }
@@ -75,8 +76,8 @@ a .Boton{
 /*****************************
 PRIMER SECTION, Presentación
 ******************************/
-#Hola{
-    margin: 13em 0em 11em 0em;
+#hola{
+    margin: 12em 2em 10em 2em;
     display: flex;
     justify-content: center;
 }
@@ -89,46 +90,50 @@ PRIMER SECTION, Presentación
 }
 .about-me .main, .about-me img{
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     /*flex-grow: 1;*/
 }
 .main h2{
-    font-size: 1.88em;
+    font-size: 1.8em;
 }
 .main h1{
     font-family: 'Allison', cursive;
-    font-size: 5.63em;
+    font-size: 5.6em;
     color: #00BFA6;
 }
 .main p{
     font-size: 0.94em;
     margin: 0.63em 0em;
 }
-.main .Boton{
+.main .boton{
     font-weight: bold;
     width: 11.5em;
     padding: 0.9em 1.88em;
-    margin: 2.5em 0em;
+    margin: 2em 0em;
 }
-.main .Boton:hover{
+.main .boton:hover{
     padding: 0.9em 1.88em;
-    margin: 2.5em 0em;
+    margin: 2em 0em;
 } 
 
 /*****************************
 SEGUNDO SECTION, Conocimientos
 ******************************/ 
-#Conocimientos{
+#conocimientos{
     background-color: #eaecee;
-    padding: 7.5em;
+    padding: 7.5em 2em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#Conocimientos h2{
-    width: 100%;
+#conocimientos h2{
+    /*width: 100%;*/
     font-size: 2.5em;
     margin-bottom: 1em;
 }
-#Conocimientos p{
+#conocimientos p{
     font-size: 0.94em;
     margin-bottom: 3.13em;
 }
@@ -138,29 +143,29 @@ SEGUNDO SECTION, Conocimientos
     flex-wrap: wrap;
     justify-content: center;
 }
-#Conocimientos .centro>div{
+#conocimientos .centro>div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end; /*no se por qué necesito el flex-end para centrar el contenido*/
     background-color: white;
-    min-width: 20px;
-    width: 16.25em;
+    min-width: 16.25em;
+    /*width: 16.25em;*/
     height: 15em;
     margin: 0.63em;
     /*padding-top: 1em;*/
     border: 0.063em solid lightgray;
     border-radius: 0.5em;
 }
-#Conocimientos div>p{
+#conocimientos div>p{
     font-size: 1.2em;
     font-weight: bold;
     margin-top: 1em; 
 }
-#Conocimientos .centro>div>img{
+#conocimientos .centro>div>img{
     width: 28%;
 }
-#Conocimientos .centro>div:hover{
+#conocimientos .centro>div:hover{
     box-shadow: 0em 0em 0.31em 0em #00BFA6;
     color: #00BFA6;
     transition: 0.2s;
@@ -169,23 +174,23 @@ SEGUNDO SECTION, Conocimientos
 /***********************
 TERCER SECTION, Frase
 ************************/
-.Frase{
+.frase{
     background-image: url(../imagenes/teal-floral.jpg); 
     background-size: cover;
     color: black;
     text-align: center;
     /*height: 500px;*/
-    padding: 7.5em;
+    padding: 7.5em 4em;
 }
-.Frase>img{
+.frase>img{
     width: 8%;
     margin: 0em auto 3.75em auto;
     min-width: 60px;
 }
-.Frase>p{
-    font-size: 1.56em;
+.frase>p{
+    font-size: 1.5em;
 }
-.Frase>h3{
+.frase>h3{
     font-family: 'Allison', cursive;
     font-size: 3.44em;
     margin-top: 1em;
@@ -194,47 +199,53 @@ TERCER SECTION, Frase
 /**************************
 CUARTO SECTION, Proyectos
 ***************************/
-#Proyectos{
-    padding: 8em;
+#proyectos{
+    padding: 8em 2em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#Proyectos h2{
+#proyectos h2{
     font-size: 2.5em;
     margin-bottom: 1em;
 }
-#Proyectos p{
+#proyectos p{
     font-size: 0.94em;
     margin-bottom: 3.13em;
 }
-#Proyectos .left{
-    width: 95%;
+#proyectos .left{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#Proyectos .left>a{
+#proyectos .left>a{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end; /*Lo mismo que me pasa en el section de Conocimientos*/
     background-color: white;
-    width: 20em;
+    width: 30%;
     height: 19em;
-    margin: 0.65em;
+    min-width: 18em;
+    min-height: 16em;
+    margin: 0.6em 0.6em;
     border: 0.063em solid lightgray;
     border-radius: 0.5em;
 }
-#Proyectos a>p{
-    font-size: 1em;
+#proyectos a>p{
+    font-size: 95%;
     font-weight: bold;
     margin-top: 1.5em;
 }
-#Proyectos .left img{
+#proyectos .left img{
     width: 90%;
     max-height: 9em;
     /*margin-top: 1em;*/
 }
-#Proyectos .left>a:hover{
+#proyectos .left>a:hover{
     box-shadow: 0em 0em 0.31em 0em #00BFA6;
     color: #00BFA6;
     cursor: pointer;
@@ -244,32 +255,33 @@ CUARTO SECTION, Proyectos
 /************************
 QUINTO SECTION, Contacto
 *************************/
-#Contacto{
+#contacto{
     background-color: #eaecee;
     padding: 10em 0em;
+    
 }
-.form{
+.formulario{
     display: flex;
     justify-content: center;
     background-color: white;
     margin: 0em auto;
-    width: 70%;
+    width: 80%;
     border: 0.063em solid lightgray;
     border-radius: 0.94em;
-    padding: 5em 3.75em 4em 3.75em;
+    padding: 5em 4em 4em 4em;
 }
-.form h2{
-    width: 100%;
+.formulario h2{
+    /*width: 100%;*/
     font-size: 2.5em;
     margin-bottom: 0.8em;
 }
-.form>div{
+.formulario>div{
     /*flex-grow: 1;*/
     width: 50%;
 }
 
 /*****Primera columna*****/
-.first-col>p{
+.formulario .first-col>p{
     width: 70%;
     font-size: 0.94em;
     margin-bottom: 2.5em;
@@ -306,19 +318,19 @@ QUINTO SECTION, Contacto
 /*****Segunda columna*****/
 .last-col label{
     font-weight: bold;
-    /*margin-right: 30px;*/
-}
-/*form{
     display: block;
-}*/
+}
 .username{
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    /*flex-wrap: wrap;*/
+    width: 100%;
 }
-.username .name, .username .last-name{
-    display: block;
+/*.username .name{
+    position: relative;
     flex-grow: 1;
-}
+}*/
+
 input,textarea{
     border: none;
     border-radius: 1.25em;
@@ -328,14 +340,14 @@ input,textarea{
     color: #7c7575;
     margin: 0.65em 0em 1.25em 0em;
     font-size: 0.9em;
-    max-width: 440px;
-    max-height: 200px;
+    width: 100%;
 }
 textarea{
-    width: 100%;
     height: 9.38em;
+    max-width: 520px;
+    max-height: 200px;
 }
-.last-col .Boton{
+.last-col .boton{
     background-color: #00BFA6;
     width: 10em;
     border-radius: 1.8em;
@@ -343,7 +355,7 @@ textarea{
     color: white;
     font-size: 0.9em;
 }
-.last-col .Boton:hover{
+.last-col .boton:hover{
     background-color: #10d4ba;
     width: 10em;
     text-transform: uppercase;
@@ -368,7 +380,7 @@ footer{
     background-size: cover;
     color: black;
     text-align: center;
-    padding: 4.4em;
+    padding: 4.4em 2em;
 }
 footer .nav>a{
     margin: 0em 0.65em;
@@ -428,5 +440,47 @@ MEDIA QUERIES
     .about-me .main{
         text-align: center;
         margin-bottom: 60px;
+    }
+}
+@media (max-width:1060px){
+    #proyectos .centro .left{
+        max-width: 700px;
+    }
+    #proyectos .centro .left>a{
+        width: 30%;
+        height: 19em;
+        min-width: 20em;
+        min-height: 16em;
+        margin: 0.6em 0.6em;
+    }
+    #contacto .formulario{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #contacto .formulario .first-col, #contacto .formulario .last-col{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    #contacto .formulario .last-col input,textarea{
+        max-width: 100%;
+    }
+    #contacto .formulario .last-col .username .name{
+       width: 50%;
+    }
+}
+@media (max-width:750px){
+    #proyectos .centro .left{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #proyectos .centro .left>a{
+        width: 20em;
+    }
+}
+@media(max-width:700px){
+    footer .nav{
+        display: none;
     }
 }
