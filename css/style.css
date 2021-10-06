@@ -268,7 +268,7 @@ QUINTO SECTION, Contacto
     width: 80%;
     border: 0.063em solid lightgray;
     border-radius: 0.94em;
-    padding: 5em 4em 4em 4em;
+    padding: 5em 4em 4em 4em;   
 }
 .formulario h2{
     /*width: 100%;*/
@@ -280,23 +280,28 @@ QUINTO SECTION, Contacto
     width: 50%;
 }
 
-/*****Primera columna*****/
+/**********Primera columna**********/
+
 .formulario .first-col>p{
-    width: 70%;
+    width: 70%;/*no se por qué si no le pongo este width se cruza con el div de al lado, Escribime*/
     font-size: 0.94em;
     margin-bottom: 2.5em;
 }
-.first-col ul>li{
-    font-size: 0.94em;
+/*.formulario .first-col .social-media{
+    display: flex;
+    justify-content: left;
+}*/
+.first-col .social-media .sm1 ul>li, .first-col .social-media .sm2 ul>li{
     margin-bottom: 0.65em;
+    font-size: 0.94em;
 }
-.first-col i{
+.first-col .social-media i{
     margin-right: 0.6em;
     padding: 0.5em;
     font-size: 1.2em;
     color: #00BFA6;
 }
-.first-col i:hover{
+.first-col .social-media i:hover{
     margin-right: 0.6em;
     padding: 0.5em;
     font-size: 1.2em;
@@ -305,17 +310,18 @@ QUINTO SECTION, Contacto
     border-radius: 10em;
     transition: 0.3s;
 }
-.first-col a:hover{
+.first-col .social-media a:hover{
     color: #10d4ba;
 }
-.first-col a:focus{
+.first-col .social-media a:focus{
     background-color: white;
     padding: 0.6em 0.6em 0.6em 0em;
     border-radius: 1.25em;
     box-shadow: 0em 0em 0.5em 0em #00BFA6;
 }
 
-/*****Segunda columna*****/
+/*********Segunda columna**********/
+
 .last-col label{
     font-weight: bold;
     display: block;
@@ -326,11 +332,16 @@ QUINTO SECTION, Contacto
     /*flex-wrap: wrap;*/
     width: 100%;
 }
-/*.username .name{
-    position: relative;
+.username .name{
+    /*position: relative;*/
     flex-grow: 1;
-}*/
-
+}
+.username .fst{
+    margin-right: 0.6em;
+}
+.username .snd{
+    margin-left: 0.6em;
+}
 input,textarea{
     border: none;
     border-radius: 1.25em;
@@ -454,13 +465,32 @@ MEDIA QUERIES
         margin: 0.6em 0.6em;
     }
     #contacto .formulario{
+        width: 85%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        padding: 5em 1em 3em 1em; 
+    }
+    .formulario .last-col label{
+        font-weight: bold;
+        display: block;
+        text-align: left;
+    }
+    .formulario .first-col .social-media{
+    display: flex;
+    justify-content: left;
+    }
+    .first-col .social-media .sm1, .first-col .social-media .sm2{
+        width: 50%;
+        text-align: left;
     }
     #contacto .formulario .first-col, #contacto .formulario .last-col{
         width: 80%;
         margin-bottom: 50px;
+    }
+    .formulario .first-col>p{
+        width: 100%;
     }
     #contacto .formulario .last-col input,textarea{
         max-width: 100%;
@@ -477,6 +507,23 @@ MEDIA QUERIES
     }
     #proyectos .centro .left>a{
         width: 20em;
+    }
+}
+@media(max-width: 815px){
+    #contacto .formulario{
+        width: 90%;
+        padding: 4em 0em 1em 0em; 
+    }
+}
+@media(max-width:750px){
+    .formulario .first-col .social-media{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    .first-col .social-media .sm1, .first-col .social-media .sm2{
+        width: 100%;
+        text-align: center;
     }
 }
 @media(max-width:700px){
