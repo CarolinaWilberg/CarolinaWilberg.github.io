@@ -21,7 +21,7 @@ header{
     position: fixed;
     top: 0em;
     width: 100%;
-    background-color: white;
+    background-color: white;    
 }
 #menu{
     display: flex;
@@ -133,7 +133,7 @@ SEGUNDO SECTION, Conocimientos
     font-size: 2.5em;
     margin-bottom: 1em;
 }
-#conocimientos p{
+#conocimientos>p{
     font-size: 0.94em;
     margin-bottom: 3.13em;
 }
@@ -147,7 +147,7 @@ SEGUNDO SECTION, Conocimientos
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /*no se por qué necesito el flex-end para centrar el contenido*/
+    justify-content: center;
     background-color: white;
     min-width: 16.25em;
     /*width: 16.25em;*/
@@ -166,7 +166,7 @@ SEGUNDO SECTION, Conocimientos
     width: 28%;
 }
 #conocimientos .centro>div:hover{
-    box-shadow: 0em 0em 0.31em 0em #00BFA6;
+    border: 0.063em solid #00BFA6;
     color: #00BFA6;
     transition: 0.2s;
 }
@@ -179,7 +179,7 @@ TERCER SECTION, Frase
     background-size: cover;
     color: black;
     text-align: center;
-    /*height: 500px;*/
+    max-height: 600px;
     padding: 7.5em 4em;
 }
 .frase>img{
@@ -211,7 +211,7 @@ CUARTO SECTION, Proyectos
     font-size: 2.5em;
     margin-bottom: 1em;
 }
-#proyectos p{
+#proyectos>p{
     font-size: 0.94em;
     margin-bottom: 3.13em;
 }
@@ -225,20 +225,20 @@ CUARTO SECTION, Proyectos
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /*Lo mismo que me pasa en el section de Conocimientos*/
+    justify-content: center; 
     background-color: white;
-    width: 30%;
-    height: 19em;
-    min-width: 18em;
-    min-height: 16em;
-    margin: 0.6em 0.6em;
+    width: 31%;
+    height: 20em;
+    /*min-width: 18em;*/
+    /*min-height: 16em;*/
+    margin: 0.6em;
     border: 0.063em solid lightgray;
     border-radius: 0.5em;
 }
 #proyectos a>p{
-    font-size: 95%;
+    font-size: 1em;
     font-weight: bold;
-    margin-top: 1.5em;
+    margin-top: 2em;
 }
 #proyectos .left img{
     width: 90%;
@@ -246,7 +246,13 @@ CUARTO SECTION, Proyectos
     /*margin-top: 1em;*/
 }
 #proyectos .left>a:hover{
-    box-shadow: 0em 0em 0.31em 0em #00BFA6;
+    border: 0.063em solid #00BFA6;
+    color: #00BFA6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#proyectos .left>a:focus{
+    box-shadow: 0em 0em 0.5em 0em #00BFA6;
     color: #00BFA6;
     cursor: pointer;
     transition: 0.3s;
@@ -258,13 +264,13 @@ QUINTO SECTION, Contacto
 #contacto{
     background-color: #eaecee;
     padding: 10em 0em;
-    
 }
 .formulario{
     display: flex;
     justify-content: center;
     background-color: white;
     margin: 0em auto;
+    max-width: 1100px;
     width: 80%;
     border: 0.063em solid lightgray;
     border-radius: 0.94em;
@@ -287,21 +293,17 @@ QUINTO SECTION, Contacto
     font-size: 0.94em;
     margin-bottom: 2.5em;
 }
-/*.formulario .first-col .social-media{
-    display: flex;
-    justify-content: left;
-}*/
 .first-col .social-media .sm1 ul>li, .first-col .social-media .sm2 ul>li{
     margin-bottom: 0.65em;
     font-size: 0.94em;
 }
-.first-col .social-media i{
+.first-col .social-media li a>i{
     margin-right: 0.6em;
     padding: 0.5em;
     font-size: 1.2em;
     color: #00BFA6;
 }
-.first-col .social-media i:hover{
+.first-col .social-media li a>i:hover{
     margin-right: 0.6em;
     padding: 0.5em;
     font-size: 1.2em;
@@ -310,10 +312,10 @@ QUINTO SECTION, Contacto
     border-radius: 10em;
     transition: 0.3s;
 }
-.first-col .social-media a:hover{
+.first-col .social-media li>a:hover{
     color: #10d4ba;
 }
-.first-col .social-media a:focus{
+.first-col .social-media li>a:focus{
     background-color: white;
     padding: 0.6em 0.6em 0.6em 0em;
     border-radius: 1.25em;
@@ -329,7 +331,6 @@ QUINTO SECTION, Contacto
 .username{
     display: flex;
     justify-content: space-between;
-    /*flex-wrap: wrap;*/
     width: 100%;
 }
 .username .name{
@@ -413,7 +414,7 @@ footer i{
     color: black;
     margin: 2em 0.5em 1.4em 0.5em;
 }
-footer i:hover{
+footer .social a>i:hover{
     font-size: 1.2em;
     background-color: black;
     padding: 0.7em;
@@ -422,16 +423,11 @@ footer i:hover{
     color: white;
     margin: 2em 0.5em 1.4em 0.5em;
 }
-/*footer .social>a:focus{
-    font-size: 1.3em;
-    background-color: black;
+footer .social a:focus i{
     padding: 0.7em;
     border-radius: 10em;
-    border: 0.06em solid white;
-    color: white;
-    margin: 2em 0.4em 1.4em 0.4em;
     box-shadow: 0em 0em 0.5em 0em black;
-}*/
+}
 footer span{
     font-family: 'Allison', cursive;
     font-size: 2em;
@@ -455,14 +451,17 @@ MEDIA QUERIES
 }
 @media (max-width:1060px){
     #proyectos .centro .left{
-        max-width: 700px;
+        max-width: 710px;
     }
     #proyectos .centro .left>a{
-        width: 30%;
-        height: 19em;
+        /*width: 30%;*/
+        /*height: 19em;*/
         min-width: 20em;
-        min-height: 16em;
+        /*min-height: 16em;*/
         margin: 0.6em 0.6em;
+    }
+    #contacto{
+        padding: 8em 0em;
     }
     #contacto .formulario{
         width: 85%;
@@ -499,16 +498,6 @@ MEDIA QUERIES
        width: 50%;
     }
 }
-@media (max-width:750px){
-    #proyectos .centro .left{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #proyectos .centro .left>a{
-        width: 20em;
-    }
-}
 @media(max-width: 815px){
     #contacto .formulario{
         width: 90%;
@@ -516,6 +505,22 @@ MEDIA QUERIES
     }
 }
 @media(max-width:750px){
+    /*#proyectos .centro .left{
+        max-width: 750px;
+    }*/
+    /*#proyectos{
+        padding: 8em 1em;
+    }*/
+    /*#proyectos .centro .left>a{
+        width: 20em;
+    }*/
+    #contacto{
+        background-color: white;
+        padding: 3em 0em;
+    }
+    #contacto .formulario{
+        border:none;
+    }
     .formulario .first-col .social-media{
         flex-direction: column;
         justify-content: center;
@@ -526,8 +531,47 @@ MEDIA QUERIES
         text-align: center;
     }
 }
+@media(max-width:710px){
+    #proyectos .centro .left{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #proyectos .centro .left>a{
+        width: 30%;
+        max-width: 10em;
+    }
+}
 @media(max-width:700px){
     footer .nav{
         display: none;
+    }
+}
+@media(max-width:500px){
+    #conocimientos{
+        padding: 7.5em 1em;
+    }
+    #conocimientos .centro>div{
+        min-width: 11em;
+        /*width: 16.25em;*/
+        height: 10em;
+        margin: 0.63em;
+    }
+    #conocimientos div>p{
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 1em; 
+    }
+    #contacto .formulario .last-col .username{
+        flex-direction: column;
+    }
+    #contacto .formulario .last-col .username .name{
+        width: 100%;
+    }
+    #contacto .formulario .last-col .username .fst{
+        margin-right: 0px;
+    }
+    #contacto .formulario .last-col .username .snd{
+        margin-left: 0px;
     }
 }
