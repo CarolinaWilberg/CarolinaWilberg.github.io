@@ -552,13 +552,13 @@ MEDIA QUERIES
         padding: 7.5em 1em;
     }
     #conocimientos .centro>div{
-        min-width: 11em;
-        /*width: 16.25em;*/
-        height: 10em;
+        min-width: 8.8em;
+        width: 40%;
+        height: 9em;
         margin: 0.63em;
     }
     #conocimientos div>p{
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: bold;
         margin-top: 1em; 
     }
@@ -573,5 +573,13 @@ MEDIA QUERIES
     }
     #contacto .formulario .last-col .username .snd{
         margin-left: 0px;
+    }
+}
+@media(max-width:350px){
+    #conocimientos .centro>div{
+        min-width: 10em;
+        width: 55%;
+        height: 9em;
+        margin: 0.63em;
     }
 }
