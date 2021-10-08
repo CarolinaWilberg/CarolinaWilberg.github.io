@@ -26,7 +26,7 @@ header{
 #menu{
     display: flex;
     justify-content: flex-end;
-    padding: 1.5% 6%;
+    padding: 1.25em 3.75em;
     box-shadow: 0em 0.31em 0.94em -0.31em lightgray;
 }
 #menu li{
@@ -60,6 +60,7 @@ a .boton{
     padding: 0.6em;
     border-radius: 1.25em;
     box-shadow: 0em 0em 0.5em 0em #00BFA6;
+    transition: 0.2s;
 }
 .boton:hover{
     background-color: #10d4ba;
@@ -179,7 +180,7 @@ TERCER SECTION, Frase
     background-size: cover;
     color: black;
     text-align: center;
-    max-height: 600px;
+    /*max-height: 600px;*/
     padding: 7.5em 4em;
 }
 .frase>img{
@@ -277,7 +278,6 @@ QUINTO SECTION, Contacto
     padding: 5em 4em 4em 4em;   
 }
 .formulario h2{
-    /*width: 100%;*/
     font-size: 2.5em;
     margin-bottom: 0.8em;
 }
@@ -289,7 +289,7 @@ QUINTO SECTION, Contacto
 /**********Primera columna**********/
 
 .formulario .first-col>p{
-    width: 70%;/*no se por qué si no le pongo este width se cruza con el div de al lado, Escribime*/
+    width: 70%;/*no se por qué si no le pongo este width se cruza con el div de al lado, .last-col*/
     font-size: 0.94em;
     margin-bottom: 2.5em;
 }
@@ -320,6 +320,7 @@ QUINTO SECTION, Contacto
     padding: 0.6em 0.6em 0.6em 0em;
     border-radius: 1.25em;
     box-shadow: 0em 0em 0.5em 0em #00BFA6;
+    transition: 0.2s;
 }
 
 /*********Segunda columna**********/
@@ -380,8 +381,11 @@ textarea{
 }
 input:focus,textarea:focus{
     box-shadow: 0em 0em 0.5em 0em #00BFA6;
-    outline: 0 none;
+    outline: 1px solid #00BFA6;
     transition: 0.2s;
+}
+.boton input:focus[type="submit"]{
+        background-color: #02aa94;
 }
 
 /**************
@@ -404,6 +408,7 @@ footer .nav>a{
 footer .nav>a:focus{
     border-radius: 1.25em;
     box-shadow: 0em 0em 0.5em 0em black;
+    transition: 0.2s;
 }
 footer i{
     font-size: 1.2em;
@@ -422,11 +427,13 @@ footer .social a>i:hover{
     border: 0.06em solid white;
     color: white;
     margin: 2em 0.5em 1.4em 0.5em;
+    transition: 0.2s;
 }
 footer .social a:focus i{
     padding: 0.7em;
     border-radius: 10em;
     box-shadow: 0em 0em 0.5em 0em black;
+    transition: 0.2s;
 }
 footer span{
     font-family: 'Allison', cursive;
@@ -446,7 +453,7 @@ MEDIA QUERIES
     }
     .about-me .main{
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 3.75em;
     }
 }
 @media (max-width:1060px){
@@ -486,7 +493,7 @@ MEDIA QUERIES
     }
     #contacto .formulario .first-col, #contacto .formulario .last-col{
         width: 80%;
-        margin-bottom: 50px;
+        margin-bottom: 3.12em;
     }
     .formulario .first-col>p{
         width: 100%;
@@ -505,15 +512,12 @@ MEDIA QUERIES
     }
 }
 @media(max-width:750px){
-    /*#proyectos .centro .left{
-        max-width: 750px;
-    }*/
-    /*#proyectos{
+    #proyectos .centro .left{
+        max-width: 700px;
+    }
+    #proyectos{
         padding: 8em 1em;
-    }*/
-    /*#proyectos .centro .left>a{
-        width: 20em;
-    }*/
+    }
     #contacto{
         background-color: white;
         padding: 3em 0em;
@@ -569,10 +573,16 @@ MEDIA QUERIES
         width: 100%;
     }
     #contacto .formulario .last-col .username .fst{
-        margin-right: 0px;
+        margin-right: 0em;
     }
     #contacto .formulario .last-col .username .snd{
-        margin-left: 0px;
+        margin-left: 0em;
+    }
+}
+@media(max-width:370px){
+    #contacto .formulario{
+        width: 100%;
+        padding: 5em 0em 3em 0em;
     }
 }
 @media(max-width:350px){
